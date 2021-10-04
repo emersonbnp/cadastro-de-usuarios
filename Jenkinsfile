@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh "./mvnw package"
+        sh "./mvnw install"
         sh "docker build -t ${env.version} ."   
         print("image successfully built")
       }
