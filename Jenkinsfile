@@ -8,10 +8,11 @@ pipeline {
         sh "docker build -t ${env.version} ."   
         print("image successfully built")
       }
-      stage('Deploy') {
-        steps {
-          echo 'Deploying....'
-          }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying....'
       }
+    }
   }
 }
